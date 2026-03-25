@@ -1,0 +1,52 @@
+{
+  "programming_languages": [
+    "python", "java", "javascript", "typescript", "c++", "c#", "go", "rust",
+    "kotlin", "swift", "ruby", "php", "scala", "r", "matlab", "perl", "bash",
+    "shell", "sql", "html", "css", "dart", "elixir", "haskell", "lua"
+  ],
+  "ml_frameworks": [
+    "pytorch", "tensorflow", "keras", "scikit-learn", "sklearn", "xgboost",
+    "lightgbm", "catboost", "hugging face", "transformers", "spacy", "nltk",
+    "gensim", "fastai", "jax", "flax", "onnx", "mlflow", "wandb", "ray"
+  ],
+  "data_engineering": [
+    "spark", "hadoop", "kafka", "airflow", "dbt", "flink", "hive", "pig",
+    "sqoop", "nifi", "prefect", "dagster", "luigi", "beam", "dataflow",
+    "pandas", "numpy", "dask", "polars", "arrow", "parquet"
+  ],
+  "cloud": [
+    "aws", "gcp", "azure", "ec2", "s3", "lambda", "sagemaker", "bigquery",
+    "cloud run", "azure ml", "databricks", "snowflake", "redshift", "athena",
+    "glue", "emr", "eks", "gke", "aks", "cloudformation", "terraform"
+  ],
+  "databases": [
+    "postgresql", "mysql", "mongodb", "redis", "elasticsearch", "cassandra",
+    "dynamodb", "sqlite", "oracle", "mssql", "neo4j", "couchdb", "influxdb",
+    "clickhouse", "pinecone", "weaviate", "chroma", "qdrant"
+  ],
+  "devops": [
+    "docker", "kubernetes", "jenkins", "github actions", "gitlab ci",
+    "circleci", "ansible", "puppet", "chef", "prometheus", "grafana",
+    "elk", "splunk", "datadog", "newrelic", "helm", "istio", "argocd"
+  ],
+  "web_frameworks": [
+    "fastapi", "flask", "django", "express", "nestjs", "spring boot",
+    "rails", "laravel", "gin", "fiber", "actix", "next.js", "react",
+    "vue", "angular", "svelte", "nuxt", "gatsby", "graphql"
+  ],
+  "nlp": [
+    "bert", "gpt", "llm", "rag", "langchain", "llamaindex", "embeddings",
+    "named entity recognition", "ner", "text classification", "sentiment analysis",
+    "question answering", "summarisation", "tokenisation", "word2vec", "fasttext",
+    "sentence-transformers", "openai", "anthropic", "fine-tuning", "lora"
+  ],
+  "soft_skills": [
+    "leadership", "communication", "teamwork", "problem solving", "agile",
+    "scrum", "kanban", "project management", "mentoring", "code review",
+    "technical writing", "stakeholder management"
+  ],
+  "certifications": [
+    "aws certified", "google certified", "azure certified", "cka", "ckad",
+    "pmp", "cissp", "ceh", "tensorflow developer", "pytorch certified"
+  ]
+}
