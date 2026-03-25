@@ -1,0 +1,28 @@
+# NLP Resume Screening - Requirements
+fastapi
+uvicorn[standard]
+python-multipart
+
+# NLP & ML
+sentence-transformers
+spacy
+scikit-learn
+numpy
+torch
+pandas
+matplotlib
+seaborn
+
+# Document parsing
+PyMuPDF
+python-docx
+
+# Utilities
+pydantic
+python-dotenv
+tqdm
+loguru
+
+# Testing
+pytest
+httpx    
