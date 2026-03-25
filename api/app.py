@@ -29,9 +29,7 @@ from src.matching.ranker import rank_candidates
 from src.matching.similarity_engine import SimilarityEngine
 from src.preprocessing.resume_parser import ResumeParser
 
-# ---------------------------------------------------------------------------
-# Application-level singletons (loaded once at startup)
-# ---------------------------------------------------------------------------
+
 _parser:  ResumeParser | None     = None
 _engine:  SimilarityEngine | None = None
 _skill_ext: SkillExtractor | None = None
@@ -61,9 +59,6 @@ app = FastAPI(
 )
 
 
-# ---------------------------------------------------------------------------
-# Routes
-# ---------------------------------------------------------------------------
 
 @app.get("/health", response_model=HealthResponse, tags=["meta"])
 async def health():
@@ -122,7 +117,6 @@ async def screen_resumes(
     if not files:
         raise HTTPException(400, "At least one resume file is required")
 
-    # --- Parse uploaded files ------------------------------------------
     resumes: list[dict] = []
     parse_errors: list[str] = []
 
@@ -160,7 +154,6 @@ async def screen_resumes(
             detail += " Errors: " + "; ".join(parse_errors)
         raise HTTPException(422, detail)
 
-    # --- Score and rank -------------------------------------------------
     ranked = rank_candidates(
         resumes=resumes,
         jd_text=job_description,
@@ -169,7 +162,6 @@ async def screen_resumes(
         engine=_engine,
     )
 
-    # --- Build response -------------------------------------------------
     response_items = [
         ScreenResponse(
             rank=i + 1,
@@ -195,9 +187,6 @@ async def screen_resumes(
     )
 
 
-# ---------------------------------------------------------------------------
-# CLI entry-point for quick local testing (no uvicorn needed)
-# ---------------------------------------------------------------------------
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("api.app:app", host="0.0.0.0", port=8000, reload=True)
